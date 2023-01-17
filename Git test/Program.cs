@@ -10,9 +10,14 @@ namespace Git_test
     {
         static void Main(string[] args)
         {
-            int RndmNUM = new Random().Next(0, 100);
-            Console.Write("I am thinking of a number between 0 and 100");
+            Console.Write("Input the First Number: ");
+            int StartingNumb = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input the Second Number: ");
+            int EndNumber = Convert.ToInt32(Console.ReadLine());
+
+            int RndmNUM = new Random().Next(StartingNumb, EndNumber);
             int NmbOfAttempts = 0;
+            Console.WriteLine("Please enter a number from " + StartingNumb + " to " + EndNumber);
 
             while (true)
             {
